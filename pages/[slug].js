@@ -18,7 +18,7 @@ export default SubPage;
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(join("data/subpages"));
-
+  
   const paths = files.map((file) => ({
     params: {
       slug: file.replace(".md", ""),

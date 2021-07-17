@@ -11,9 +11,7 @@ const Algorithms = ({ content, title, slug, code }) => {
       <h2 style={{ textTransform: "capitalize", marginBottom: "5rem" }}>
         {title}
       </h2>
-      <div
-        
-      >
+      <div>
         <div
           style={{
             border: "1px solid gray",
