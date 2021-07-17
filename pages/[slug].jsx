@@ -18,7 +18,6 @@ export default SubPage;
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(join(process.cwd(), "data", "subpages"));
-
   const paths = files.map((file) => ({
     params: {
       slug: file.replace(".md", ""),
@@ -32,7 +31,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params: { slug } }) => {
   const file = fs.readFileSync(
-    join(process.cwd(), "data", "subpages", slug, ".md"),
+    join(process.cwd(), "data", "subpages", slug+ ".md"),
     "utf-8"
   );
 
