@@ -1,6 +1,5 @@
 import { Box, Flex, Grid, Heading } from "@chakra-ui/react";
 import Head from "next/head";
-import Particles from "react-particles-js";
 import Card from "../components/Card";
 
 import cards from "../data/cards";
