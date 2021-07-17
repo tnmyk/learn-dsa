@@ -54,10 +54,13 @@ export const getStaticPaths = async () => {
 };
 export const getStaticProps = async ({ params: { slug } }) => {
   const file = fs.readFileSync(
-    join("data/algorithms/" , slug , ".md"),
+    join(process.cwd(), "data", "algorithms", slug, ".md"),
     "utf-8"
   );
-  const code = fs.readFileSync(join("data/code/" , slug , ".md"), "utf-8");
+  const code = fs.readFileSync(
+    join(process.cwd(), "data", "code", slug, ".md"),
+    "utf-8"
+  );
 
   const mdxSource = await serialize(file);
   const codeSource = await serialize(code);

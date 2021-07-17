@@ -31,7 +31,10 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params: { slug } }) => {
-  const file = fs.readFileSync(join("data/subpages/" + slug + ".md"), "utf-8");
+  const file = fs.readFileSync(
+    join(process.cwd(), "data", "subpages", slug, ".md"),
+    "utf-8"
+  );
 
   const mdxSource = await serialize(file);
   return { props: { content: mdxSource } };
