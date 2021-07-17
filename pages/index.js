@@ -2,7 +2,7 @@ import { Box, Flex, Grid, Heading } from "@chakra-ui/react";
 import Head from "next/head";
 import Particles from "react-particles-js";
 import Card from "../components/Card";
-import particlesConfig from "../config/particles-config";
+
 import cards from "../data/cards";
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         <title>Learn DSA</title>
       </Head>
       <Box zIndex="1" opacity="1" w="100%" h="100vh" position="fixed">
-        <Particles params={particlesConfig} />
+       
       </Box>
       <Flex
         position="relative"
