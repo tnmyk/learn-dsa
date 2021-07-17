@@ -9,9 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.6.5",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@mdx-js/react": "^1.6.22",
+    "framer-motion": "^4.1.17",
     "next": "11.0.1",
+    "next-mdx-remote": "^3.0.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-particles-js": "^3.5.3"
   },
   "devDependencies": {
     "eslint": "7.30.0",
