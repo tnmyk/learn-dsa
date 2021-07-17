@@ -40,7 +40,7 @@ const Algorithms = ({ content, title, slug, code }) => {
 export default Algorithms;
 
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync(join("data/algorithms"));
+  const files = fs.readdirSync(join(process.cwd(), "data", "algorithms"));
 
   const paths = files.map((file) => ({
     params: {
@@ -54,10 +54,10 @@ export const getStaticPaths = async () => {
 };
 export const getStaticProps = async ({ params: { slug } }) => {
   const file = fs.readFileSync(
-    join("data/algorithms/" + slug + ".md"),
+    join("data/algorithms/" , slug , ".md"),
     "utf-8"
   );
-  const code = fs.readFileSync(join("data/code/" + slug + ".md"), "utf-8");
+  const code = fs.readFileSync(join("data/code/" , slug , ".md"), "utf-8");
 
   const mdxSource = await serialize(file);
   const codeSource = await serialize(code);
