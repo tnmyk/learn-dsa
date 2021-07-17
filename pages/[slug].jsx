@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
   const files = fs.readdirSync(join(process.cwd(), "data", "subpages"));
   const paths = files.map((file) => ({
     params: {
-      slug: file.replace(".md", ""),
+      slug: file.replace(/\.md$/, ""),
     },
   }));
   return {
