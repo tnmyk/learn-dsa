@@ -26,11 +26,11 @@ const Algorithms = ({ content, title, topic, code }) => {
         <MDXRemote {...content} components={components} lazy />
       </div>
 
-      <div>
+      <div style={{borderRadius:'15px',overflow:'hidden',width:'40%',margin: "3rem auto"}}>
         <img
-          style={{ margin: "3rem auto" }}
+        
           src={`/code/${topic}.png`}
-          width="50%"
+          width="100%"
         />
       </div>
     </div>

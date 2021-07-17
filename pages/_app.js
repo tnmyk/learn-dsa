@@ -21,18 +21,22 @@ function MyApp({ Component, pageProps }) {
         h4: {
           fontSize: "1.5rem",
         },
+        h5: {
+          fontSize: "1.2rem",
+        },
         ".link": {
           cursor: "pointer",
-          color:'lightblue',textDecoration:'underline',
-          fontSize:'1.2rem',
-          _hover:{
-            
-          
-          }
+          color: "lightblue",
+          textDecoration: "underline",
+          fontSize: "1.2rem",
+          width:'max-content',
+          margin:'0.7rem 0',
+          display:'block',
+          _hover: {},
         },
-        ".link-container":{
-          marginLeft:'1rem'
-        }
+        ".link-container": {
+          marginLeft: "1rem",
+        },
       },
     },
   });

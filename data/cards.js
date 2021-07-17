@@ -10,7 +10,7 @@ const cards = [
     snippet: "Learn Data Structures",
   },
   {
-    title: "Learn Data Structures",
+    title: "Learn Sorting ",
     link: "data-structures",
     snippet: "Learn Data Structures",
   },
