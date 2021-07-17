@@ -6,4 +6,3 @@
   <p class='link-container'>
     <Link href='/algorithms/linear-search'><a class='link'>Linear Search</a></Link>
     </p>
-<p>sdasdasd</p>

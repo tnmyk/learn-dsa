@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
     },
   });
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider  theme={theme}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
