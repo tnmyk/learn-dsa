@@ -5,7 +5,7 @@ import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
 
 const components = { Link };
-const Algorithms = ({ content, title, slug, code }) => {
+const Algorithms = ({ content, title, topic, code }) => {
   return (
     <div>
       <h2 style={{ textTransform: "capitalize", marginBottom: "5rem" }}>
@@ -29,7 +29,7 @@ const Algorithms = ({ content, title, slug, code }) => {
       <div>
         <img
           style={{ margin: "3rem auto" }}
-          src={`/code/${slug}.png`}
+          src={`/code/${topic}.png`}
           width="50%"
         />
       </div>
@@ -44,7 +44,7 @@ export const getStaticPaths = async () => {
 
   const paths = files.map((file) => ({
     params: {
-      slug: file.replace(/\.md$/, ""),
+      topic: file.replace(/\.md$/, ""),
     },
   }));
   return {
@@ -52,13 +52,13 @@ export const getStaticPaths = async () => {
     fallback: false,
   };
 };
-export const getStaticProps = async ({ params: { slug } }) => {
+export const getStaticProps = async ({ params: { topic } }) => {
   const file = fs.readFileSync(
-    join(process.cwd(), "data", "algorithms", slug+".md"),
+    join(process.cwd(), "data", "algorithms", topic+".md"),
     "utf-8"
   );
   const code = fs.readFileSync(
-    join(process.cwd(), "data", "code", slug+ ".md"),
+    join(process.cwd(), "data", "code", topic+ ".md"),
     "utf-8"
   );
 
@@ -67,8 +67,8 @@ export const getStaticProps = async ({ params: { slug } }) => {
   return {
     props: {
       content: mdxSource,
-      title: slug.replace("-", " "),
-      slug: slug,
+      title: topic.replace("-", " "),
+      topic: topic,
       code: codeSource,
     },
   };
