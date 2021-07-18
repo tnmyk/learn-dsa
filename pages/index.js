@@ -13,14 +13,12 @@ export default function Home() {
         position="relative"
         alignItems="center"
         flexDir="column"
-        zIndex="10" 
+        zIndex="10"
       >
-    
         <Box
           zIndex="-1"
           backgroundImage="url('/background.png')"
-          backgroundSize='contain'
-          
+          backgroundSize="contain"
           opacity="0.4"
           w="100%"
           h="100%"
@@ -35,10 +33,12 @@ export default function Home() {
         <Grid
           mt="4rem"
           rowGap={12}
+          columnGap={'2.8rem'}
           w="92%"
           justifyContent="space-between"
           gridAutoRows="1fr"
-          templateColumns="repeat(auto-fit,minmax(200px,310px))"
+          // templateColumns="repeat(auto-fit,minmax(200px,310px))"
+          templateColumns="repeat(3,1fr)"
           mx="auto"
         >
           {cards.map((card) => {
