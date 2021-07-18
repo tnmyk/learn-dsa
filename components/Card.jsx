@@ -11,7 +11,7 @@ const Card = ({ title, snippet, link }) => {
           overflow="hidden"
           bgColor="gray.900"
           h="100%"
-          minH="400px"
+          minH="380px"
           transition='0.3s'
           _hover={{ transform: 'scale(1.05)' }}
         >

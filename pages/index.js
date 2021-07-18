@@ -9,13 +9,23 @@ export default function Home() {
       <Head>
         <title>Learn DSA</title>
       </Head>
-      <Box zIndex="1" opacity="1" w="100%" h="100vh" position="fixed"></Box>
       <Flex
         position="relative"
         alignItems="center"
         flexDir="column"
-        zIndex="10"
+        zIndex="10" 
       >
+    
+        <Box
+          zIndex="-1"
+          backgroundImage="url('/background.png')"
+          backgroundSize='contain'
+          
+          opacity="0.4"
+          w="100%"
+          h="100%"
+          position="absolute"
+        ></Box>
         <Heading size="3xl" w="max-content" mt="8rem">
           Data Structure and Algorithms
         </Heading>

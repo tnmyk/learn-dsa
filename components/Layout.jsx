@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       overflow="hidden"
     >
       <Navbar />
-      <Box w="100%" p="1rem 3rem" overflow="auto">
+      <Box w="100%" p="1rem 3rem" overflow="auto" position='relative'>
         {pathname !== "/" && (
           <IoIosArrowRoundBack
             style={{ display: "block", marginBottom: "2rem",fontSize:'2.5rem',cursor:'pointer' }}
