@@ -19,5 +19,6 @@ const cards = [
     link: "searching-algorithms",
     snippet: "Learn Searching Algorithms",
   },
+  
 ];
 export default cards;

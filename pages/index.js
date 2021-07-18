@@ -9,9 +9,7 @@ export default function Home() {
       <Head>
         <title>Learn DSA</title>
       </Head>
-      <Box zIndex="1" opacity="1" w="100%" h="100vh" position="fixed">
-       
-      </Box>
+      <Box zIndex="1" opacity="1" w="100%" h="100vh" position="fixed"></Box>
       <Flex
         position="relative"
         alignItems="center"
@@ -28,13 +26,20 @@ export default function Home() {
           mt="4rem"
           gap={12}
           w="90%"
-          justifyContent="center"
-          gridAutoRows="minmax(min-content,max-content)"
-          templateColumns="repeat(auto-fit,minmax(200px,300px))"
+          justifyContent="space-between"
+          gridAutoRows="1fr"
+          templateColumns="repeat(auto-fit,minmax(200px,340px))"
           mx="auto"
         >
-          {cards.map((card)=>{
-            return <Card title={card.title} snippet={card.snippet} link={card.link} key={Math.random()} />
+          {cards.map((card) => {
+            return (
+              <Card
+                title={card.title}
+                snippet={card.snippet}
+                link={card.link}
+                key={Math.random()}
+              />
+            );
           })}
         </Grid>
       </Flex>
