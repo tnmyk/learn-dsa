@@ -24,9 +24,9 @@ export default function Home() {
         </Heading>
         <Grid
           mt="4rem"
-          gap={12}
-          w="100%"
-          justifyContent="space-around"
+          rowGap={12}
+          w="90%"
+          justifyContent="space-between"
           gridAutoRows="1fr"
           templateColumns="repeat(auto-fit,minmax(200px,340px))"
           mx="auto"
