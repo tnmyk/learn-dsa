@@ -23,7 +23,8 @@ function MyApp({ Component, pageProps }) {
           fontSize: "1.5rem",
         },
         h5: {
-          fontSize: "1.2rem",
+          fontSize: "1.1rem",
+          fontWeight:'bold'
         }
         ,
         ".link": {

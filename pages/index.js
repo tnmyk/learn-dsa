@@ -35,10 +35,10 @@ export default function Home() {
         <Grid
           mt="4rem"
           rowGap={12}
-          w="90%"
+          w="92%"
           justifyContent="space-between"
           gridAutoRows="1fr"
-          templateColumns="repeat(auto-fit,minmax(200px,340px))"
+          templateColumns="repeat(auto-fit,minmax(200px,310px))"
           mx="auto"
         >
           {cards.map((card) => {

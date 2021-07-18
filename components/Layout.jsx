@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { IoIosArrowRoundBack } from "react-icons/io";
 const Layout = ({ children }) => {
   const { pathname, back } = useRouter();
-  console.log(pathname);
+
   return (
     <Flex
       bgColor="#010102"

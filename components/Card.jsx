@@ -11,21 +11,19 @@ const Card = ({ title, snippet, link }) => {
           overflow="hidden"
           bgColor="gray.900"
           h="100%"
-          minH="380px"
+          minH="340px"
           transition="0.3s"
           _hover={{ transform: "scale(1.05)" }}
         >
-          <div style={{height:'60%',overflow:'hidden'}}>
+          <div style={{ height: "60%", overflow: "hidden" }}>
             <img
               src={"/cards/" + title.replace(/\s/g, "-").toLowerCase() + ".png"}
               width="100%"
             />
           </div>
 
-          <Heading size="md" m="1rem">
-            {title}
-          </Heading>
-          <Text m="1rem 1.5rem">{snippet}</Text>
+          <h5 style={{margin:'0 1rem',marginTop:'1rem'}}>{title}</h5>
+          <Text m="0.3rem 1rem" fontSize='0.9rem'>{snippet}</Text>
         </Box>
       </a>
     </Link>
