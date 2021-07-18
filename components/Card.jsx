@@ -12,10 +12,16 @@ const Card = ({ title, snippet, link }) => {
           bgColor="gray.900"
           h="100%"
           minH="380px"
-          transition='0.3s'
-          _hover={{ transform: 'scale(1.05)' }}
+          transition="0.3s"
+          _hover={{ transform: "scale(1.05)" }}
         >
-          <img src="https://picsum.photos/300/200" width="100%" />
+          <div style={{height:'60%',overflow:'hidden'}}>
+            <img
+              src={"/cards/" + title.replace(/\s/g, "-").toLowerCase() + ".png"}
+              width="100%"
+            />
+          </div>
+
           <Heading size="md" m="1rem">
             {title}
           </Heading>

@@ -10,12 +10,12 @@ const cards = [
     snippet: "Learn Data Structures",
   },
   {
-    title: "Learn Sorting Algorithms ",
+    title: "Learn Sorting Algorithms",
     link: "sorting-algorithms",
     snippet: "Learn Sorting Algorithms",
   },
   {
-    title: "Learn Searching Algorithms ",
+    title: "Learn Searching Algorithms",
     link: "searching-algorithms",
     snippet: "Learn Searching Algorithms",
   },
