@@ -14,13 +14,11 @@ const Card = ({ title, snippet, link }) => {
           minH="340px"
           transition="0.3s"
           _hover={{ transform: "scale(1.05)" }}
-        >
-          <div style={{ height: "60%", overflow: "hidden" }}>
-            <img
+        > <img
               src={"/cards/" + title.replace(/\s/g, "-").toLowerCase() + ".png"}
               width="100%"
             />
-          </div>
+  
 
           <h5 style={{margin:'0 1rem',marginTop:'1rem'}}>{title}</h5>
           <Text m="0.3rem 1rem" fontSize='0.9rem'>{snippet}</Text>
