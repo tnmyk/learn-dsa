@@ -31,15 +31,19 @@ function MyApp({ Component, pageProps }) {
           cursor: "pointer",
           color: "lightblue",
           textDecoration: "underline",
-          fontSize: "1.2rem",
+          fontSize: "1rem",
           width: "max-content",
-          margin: "0.7rem 0",
+          margin: "0.6rem 0",
           display: "block",
           _hover: {},
         },
         ".link-container": {
-          marginLeft: "1rem",
+          marginLeft: "2rem",
+          marginBottom:'2rem'
         },
+        ".page":{
+          marginLeft:"1rem"
+        }
       },
     },
   });

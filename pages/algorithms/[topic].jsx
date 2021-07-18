@@ -7,7 +7,7 @@ import Link from "next/link";
 const components = { Link };
 const Algorithms = ({ content, title, topic, code }) => {
   return (
-    <div>
+    <div style={{ width: "80%", margin: "0 auto" }}>
       <h2 style={{ textTransform: "capitalize", marginBottom: "5rem" }}>
         {title}
       </h2>
@@ -26,12 +26,15 @@ const Algorithms = ({ content, title, topic, code }) => {
         <MDXRemote {...content} components={components} lazy />
       </div>
 
-      <div style={{borderRadius:'15px',overflow:'hidden',width:'40%',margin: "3rem auto"}}>
-        <img
-        
-          src={`/code/${topic}.png`}
-          width="100%"
-        />
+      <div
+        style={{
+          borderRadius: "15px",
+          overflow: "hidden",
+          width: "60%",
+          margin: "3rem auto",
+        }}
+      >
+        <img src={`/code/${topic}.png`} width="100%" />
       </div>
     </div>
   );
@@ -54,11 +57,11 @@ export const getStaticPaths = async () => {
 };
 export const getStaticProps = async ({ params: { topic } }) => {
   const file = fs.readFileSync(
-    join(process.cwd(), "data", "algorithms", topic+".md"),
+    join(process.cwd(), "data", "algorithms", topic + ".md"),
     "utf-8"
   );
   const code = fs.readFileSync(
-    join(process.cwd(), "data", "code", topic+ ".md"),
+    join(process.cwd(), "data", "code", topic + ".md"),
     "utf-8"
   );
 

@@ -8,7 +8,7 @@ import Link from "next/link";
 const components = { Link };
 const SubPage = ({ content }) => {
   return (
-    <div>
+    <div style={{ width: "80%", margin: "0 auto" }}>
       <MDXRemote {...content} components={components} lazy />
     </div>
   );

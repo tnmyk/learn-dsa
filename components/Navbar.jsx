@@ -2,6 +2,8 @@ import { Flex, IconButton } from "@chakra-ui/react";
 import Link from "next/link";
 import { BiHomeAlt } from "react-icons/bi";
 import { GrGraphQl } from "react-icons/gr";
+import {GoCheck} from 'react-icons/go'
+
 const Navbar = () => {
   return (
     <Flex
@@ -21,7 +23,9 @@ const Navbar = () => {
       <Link href="/graph">
         <IconButton aria-label="Home" icon={<GrGraphQl />} w="1rem" />
       </Link>
-      <IconButton aria-label="Home" icon={<BiHomeAlt />} w="1rem" />
+      <Link href="/checklist">
+        <IconButton aria-label="Home" icon={<GoCheck />} w="1rem" />
+      </Link>
     </Flex>
   );
 };
