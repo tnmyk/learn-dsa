@@ -5,40 +5,33 @@ import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
 import { Button } from "@chakra-ui/react";
 import { AiTwotoneCopy } from "react-icons/ai";
+import Image from "next/image";
 const components = { Link };
 const Algorithms = ({ content, title, topic, code }) => {
   return (
     <div style={{ width: "80%", margin: "0 auto" }}>
-      <h2 style={{ textTransform: "capitalize", marginBottom: "5rem" }}>
+      <h2 style={{ textTransform: "capitalize", marginBottom: "3rem" }}>
         {title}
       </h2>
       <div>
-        {/* <div
-          style={{
-            border: "1px solid gray",
-            borderRadius: "8px",
-            padding: "2rem",
-            margin: "2rem auto",
-            width: "max-content",
-            whiteSpace:'pre'
-          }}
-        >
-        
-          {code}
-        </div> */}
-
         <MDXRemote {...content} components={components} lazy />
       </div>
-      <div style={{ width: "55%", margin: "3rem auto", position: "relative" }}>
+      <div style={{ width: "55%", margin: "2rem auto", position: "relative" }}>
         <div
           style={{
             borderRadius: "15px",
             overflow: "hidden",
             width: "100%",
+            minHeight: "20rem",
             margin: "1rem auto",
           }}
         >
-          <img draggable="false" src={`/code/${topic}.png`} width="100%" />
+          <Image
+            alt="Mountains"
+            src={`/code/${topic}.png`}
+            layout="fill"
+            objectFit="contain"
+          />
         </div>
         <Button
           colorScheme="yellow"
