@@ -12,7 +12,7 @@ const CheckItem = ({ name, isChecked, id, changeCheck, date,type }) => {
       break;      
   }
   return (
-    <div style={{ display: "flex", alignItems: "center",margin:'1rem 1rem' }}>
+    <div style={{ display: "flex", alignItems: "center", margin: "1rem 1rem" }}>
       <Checkbox
         isChecked={isChecked}
         onChange={() => {
@@ -21,9 +21,19 @@ const CheckItem = ({ name, isChecked, id, changeCheck, date,type }) => {
         mr="1rem"
       ></Checkbox>{" "}
       {name}{" "}
-      <Tag ml='1rem' fontSize='0.7rem' size='sm' variant="solid" colorScheme={tagColor}>
-        {type}
-      </Tag>
+      {type ? (
+        <Tag
+          ml="1rem"
+          fontSize="0.7rem"
+          size="sm"
+          variant="solid"
+          colorScheme={tagColor}
+        >
+          {type}
+        </Tag>
+      ) : (
+        ""
+      )}
       <span style={{ color: "gray", fontSize: "0.8rem", marginLeft: "1rem" }}>
         {" "}
         {isChecked && "completed on - " + date}
