@@ -32,6 +32,9 @@ const CheckList = () => {
   }, []);
   return (
     <div style={{ margin: "0 auto", width: "80%" }}>
+      {/* <Head>
+        <title>Checklist</title>
+      </Head> */}
       <Heading size="2xlg" mb="3rem">
         CheckList
       </Heading>
