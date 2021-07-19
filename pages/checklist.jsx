@@ -4,8 +4,9 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
-  Box,
+  Flex,
   Heading,
+  Tag,
 } from "@chakra-ui/react";
 import CheckItem from "../components/CheckItem";
 import topics from "../data/topics";
@@ -32,9 +33,6 @@ const CheckList = () => {
   }, []);
   return (
     <div style={{ margin: "0 auto", width: "80%" }}>
-      {/* <Head>
-        <title>Checklist</title>
-      </Head> */}
       <Heading size="2xlg" mb="3rem">
         CheckList
       </Heading>
@@ -42,9 +40,15 @@ const CheckList = () => {
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
-                Algorithms
-              </Box>
+              <Flex alignItems="center" flex="1" textAlign="left">
+                Algorithms{" "}
+                <Tag ml="1rem" size="sm" colorScheme="teal">
+                  {topics.algorithms.filter((x) => checkData[x.id] == true)
+                    .length +
+                    "/" +
+                    topics.algorithms.length}
+                </Tag>
+              </Flex>
               <AccordionIcon />
             </AccordionButton>
           </h2>
@@ -68,9 +72,15 @@ const CheckList = () => {
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
-                Algorithms (advanced)
-              </Box>
+              <Flex alignItems="center" flex="1" textAlign="left">
+                Algorithms (advanced){" "}
+                <Tag ml="1rem" size="sm" colorScheme="teal">
+                  {topics.algorithmsAdv.filter((x) => checkData[x.id] == true)
+                    .length +
+                    "/" +
+                    topics.algorithmsAdv.length}
+                </Tag>
+              </Flex>
               <AccordionIcon />
             </AccordionButton>
           </h2>
@@ -93,9 +103,15 @@ const CheckList = () => {
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
-                Data Structures
-              </Box>
+              <Flex alignItems="center" flex="1" textAlign="left">
+                Data Structures{" "}
+                <Tag ml="1rem" size="sm" colorScheme="teal">
+                  {topics.dataStructures.filter((x) => checkData[x.id] == true)
+                    .length +
+                    "/" +
+                    topics.dataStructures.length}
+                </Tag>
+              </Flex>
               <AccordionIcon />
             </AccordionButton>
           </h2>
@@ -118,9 +134,16 @@ const CheckList = () => {
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
-                Data Structures (advanced)
-              </Box>
+              <Flex alignItems="center" flex="1" textAlign="left">
+                Data Structures (advanced){" "}
+                <Tag ml="1rem" size="sm" colorScheme="teal">
+                  {topics.dataStructuresAdv.filter(
+                    (x) => checkData[x.id] == true
+                  ).length +
+                    "/" +
+                    topics.dataStructuresAdv.length}
+                </Tag>
+              </Flex>
               <AccordionIcon />
             </AccordionButton>
           </h2>
@@ -143,9 +166,15 @@ const CheckList = () => {
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
-                More Advanced Topics
-              </Box>
+              <Flex alignItems="center" flex="1" textAlign="left">
+                More Advanced Topics{" "}
+                <Tag ml="1rem" size="sm" colorScheme="teal">
+                  {topics.Adv.filter((x) => checkData[x.id] == true)
+                    .length +
+                    "/" +
+                    topics.Adv.length}
+                </Tag>
+              </Flex>
               <AccordionIcon />
             </AccordionButton>
           </h2>

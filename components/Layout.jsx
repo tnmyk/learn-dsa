@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { lastIndexOf } from "lodash";
 const Layout = ({ children }) => {
   const { pathname, asPath, back } = useRouter();
   const [title, setTitle] = useState("Home");
@@ -13,8 +12,11 @@ const Layout = ({ children }) => {
       asPath.lastIndexOf("/") + 1,
       asPath.length
     );
-    if(!lastPath) return;
-    if (lastPath.indexOf("-") === -1) return setTitle(lastPath[0].toUpperCase() + lastPath.substring(1, lastPath.length));
+    if (!lastPath) return;
+    if (lastPath.indexOf("-") === -1)
+      return setTitle(
+        lastPath[0].toUpperCase() + lastPath.substring(1, lastPath.length)
+      );
 
     setTitle(
       lastPath

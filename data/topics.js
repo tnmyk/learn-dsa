@@ -12,7 +12,7 @@ const topics = {
     },
     {
       name: "Bubble Sort",
-      id: "Bubble Sort",
+      id: "bubble-sort",
       type: "Sorting",
     },
     {
