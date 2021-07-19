@@ -169,8 +169,7 @@ const CheckList = () => {
               <Flex alignItems="center" flex="1" textAlign="left">
                 More Advanced Topics{" "}
                 <Tag ml="1rem" size="sm" colorScheme="teal">
-                  {topics.Adv.filter((x) => checkData[x.id] == true)
-                    .length +
+                  {topics.Adv.filter((x) => checkData[x.id] == true).length +
                     "/" +
                     topics.Adv.length}
                 </Tag>
