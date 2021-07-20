@@ -16,10 +16,12 @@ const Card = ({ title, snippet, link }) => {
           _hover={{ transform: "scale(1.05)" }}
         >
           {" "}
-          <img
+          <div style={{maxHeight:'60%',overflow:'hidden'}}>
+          <img draggable='false'
             src={"/cards/" + title.replace(/\s/g, "-").toLowerCase() + ".png"}
             width="100%"
           />
+          </div>
           <h5 style={{ margin: "0 1rem", marginTop: "1rem" }}>{title}</h5>
           <div style={{minHeight:'90px'}}>
             <Text m="0.3rem 1rem" mb="1rem" fontSize="0.9rem">

@@ -10,6 +10,11 @@ const cards = [
     snippet: "Learn Data Structures",
   },
   {
+    title: "Time Complexity O(n)",
+    link: "visualize-time-complexity",
+    snippet: "Visualize Time Complexity",
+  },
+  {
     title: "Learn Sorting Algorithms",
     link: "sorting-algorithms",
     snippet: "Learn Sorting Algorithms",
@@ -19,6 +24,5 @@ const cards = [
     link: "searching-algorithms",
     snippet: "Learn Searching Algorithms",
   },
-  
 ];
 export default cards;
