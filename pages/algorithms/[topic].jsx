@@ -3,28 +3,39 @@ import { join } from "path";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
-import { Button } from "@chakra-ui/react";
+import { Box, Button, Heading } from "@chakra-ui/react";
 import { AiTwotoneCopy } from "react-icons/ai";
 import Image from "next/image";
+
 const components = { Link };
 const Algorithms = ({ content, title, topic, code }) => {
   return (
     <div style={{ width: "80%", margin: "0 auto" }}>
-      <h2 style={{ textTransform: "capitalize", marginBottom: "3rem" }}>
+      <Heading
+        textTransform="capitalize"
+        mb="3rem"
+        fontWeight="500"
+        fontSize={["2rem", "3rem", "4rem", "5rem"]}
+      >
         {title}
-      </h2>
+      </Heading>
       <div>
         <MDXRemote {...content} components={components} lazy />
       </div>
-      <div style={{ width: "55%", margin: "2rem auto", position: "relative" }}>
-        <div
-          style={{
-            borderRadius: "15px",
-            overflow: "hidden",
-            width: "100%",
-            minHeight: "20rem",
-            margin: "1rem auto",
-          }}
+      <Box
+        w={["95%", "95%", "95%", "65%"]}
+        h="max-content"
+        my="2rem"
+        mx="auto"
+        position="relative"
+
+      >
+        <Box
+          borderRadius="15px"
+          overflow="hidden"
+          width="100%"
+          minHeight={["10rem", "14rem", "20rem", "20rem"]}
+          margin="1rem auto"
         >
           <Image
             alt="Mountains"
@@ -32,7 +43,7 @@ const Algorithms = ({ content, title, topic, code }) => {
             layout="fill"
             objectFit="contain"
           />
-        </div>
+        </Box>
         <Button
           colorScheme="yellow"
           onClick={() => {
@@ -44,7 +55,7 @@ const Algorithms = ({ content, title, topic, code }) => {
         >
           Copy Code <AiTwotoneCopy style={{ marginLeft: "0.3rem" }} />
         </Button>
-      </div>
+      </Box>
     </div>
   );
 };

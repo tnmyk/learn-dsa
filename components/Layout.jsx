@@ -46,6 +46,7 @@ const Layout = ({ children }) => {
         px={["0", "0", "3rem", "3rem"]}
         overflow="auto"
         position="relative"
+        h='100%'
       >
         {pathname !== "/" && (
           <Box ml={["1.5rem", "1.5rem", "0","0"]}>
