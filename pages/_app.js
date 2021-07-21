@@ -79,7 +79,7 @@ function MyApp({ Component, pageProps }) {
           <ModalBody>
             This project is currently under development. <br /> Kindly ignore
             the blank pages if any. <br /> If you can, please consider
-            contributing to this project on Github. <br /> Thank you!
+            contributing to this project on Github.<br/>You can also help me with graphic designing. <br /> Thank you!
           </ModalBody>
 
           <ModalFooter>
