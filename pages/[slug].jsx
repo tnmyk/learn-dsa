@@ -4,12 +4,24 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
 import Link from "next/link";
+import { Heading } from "@chakra-ui/react";
 
-const components = { Link };
+const title = ({children})=>{
+  return (
+    <Heading fontWeight="md" fontSize={["2rem", "3rem", "4rem", "5rem"]}>
+      {children}
+    </Heading>
+  );
+}
+
+const components = { Link,h1:title };
+
 const SubPage = ({ content }) => {
   return (
     <div style={{ width: "80%", margin: "0 auto" }}>
       <MDXRemote {...content} components={components} lazy />
+     
+      
     </div>
   );
 };

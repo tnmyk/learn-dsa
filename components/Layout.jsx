@@ -34,24 +34,33 @@ const Layout = ({ children }) => {
       width="100%"
       h="100vh"
       overflow="hidden"
+      flexDirection={["column", "column", "row", "row"]}
     >
       <Navbar />
       <Head>
         <title>{title}</title>
       </Head>
-      <Box w="100%" p="1rem 3rem" overflow="auto" position="relative">
+      <Box
+        w="100%"
+        py="1rem"
+        px={["0", "0", "3rem", "3rem"]}
+        overflow="auto"
+        position="relative"
+      >
         {pathname !== "/" && (
-          <IoIosArrowRoundBack
-            style={{
-              display: "block",
-              marginBottom: "2rem",
-              fontSize: "2.5rem",
-              cursor: "pointer",
-            }}
-            onClick={() => {
-              back();
-            }}
-          />
+          <Box ml={["1.5rem", "1.5rem", "0","0"]}>
+            <IoIosArrowRoundBack
+              style={{
+                display: "block",
+                marginBottom: "2rem",
+                fontSize: "2.5rem",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                back();
+              }}
+            />
+          </Box>
         )}
         {children}
       </Box>

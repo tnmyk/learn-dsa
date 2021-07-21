@@ -24,7 +24,11 @@ export default function Home() {
           h="100%"
           position="absolute"
         ></Box>
-        <Heading size="3xl" w="max-content" mt="8rem">
+        <Heading
+          fontSize={["2xl", "4xl", "5xl", "6xl"]}
+          w="max-content"
+          mt="8rem"
+        >
           Data Structure and Algorithms
         </Heading>
         <Heading size="md" w="max-content" my="2rem">
@@ -33,12 +37,17 @@ export default function Home() {
         <Grid
           mt="4rem"
           rowGap={12}
-          columnGap={'2.8rem'}
+          columnGap={"2.8rem"}
           w="92%"
           justifyContent="space-between"
           gridAutoRows="1fr"
           // templateColumns="repeat(auto-fit,minmax(200px,310px))"
-          templateColumns="repeat(3,1fr)"
+          templateColumns={[
+            "repeat(1,1fr)",
+            "repeat(1,1fr)",
+            "repeat(2,1fr)",
+            "repeat(3,1fr)",
+          ]}
           mx="auto"
         >
           {cards.map((card) => {

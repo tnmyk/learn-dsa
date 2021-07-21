@@ -7,11 +7,14 @@ import {GoCheck} from 'react-icons/go'
 const Navbar = () => {
   return (
     <Flex
-      flexDir="column"
-      alignItems="center"
-      justifyContent="space-evenly"
-      h="100vh"
-      w="4rem"
+      flexDir={["row", "row", "column", "column"]}
+      alignItems={["space-evenly", "space-evenly", "center", "center"]}
+      // justifyContent={["center", "center", "space-evenly", "space-evenly"]}
+      justifyContent='space-evenly'
+      // p='1.5rem'
+      py={['1rem','1rem','0','0']}
+      h={["4rem", "4rem", "100vh", "100vh"]}
+      w={["100%", "100%", "4rem", "4rem"]}
       bgColor="#010102"
       borderRight="1px"
       borderRightColor="whiteAlpha.200"
