@@ -32,9 +32,9 @@ const CheckList = () => {
     }
   }, []);
   return (
-    <div style={{ margin: "0 auto", width: "90%" }}>
-      <Heading size="2xlg" mb="3rem">
-        CheckList
+    <div style={{ margin: "0 auto", width: "90%" ,paddingBottom:'5rem'}}>
+      <Heading ml='0.8rem' fontSize={["2rem", "3rem", "3rem", "3rem"]} mb="3rem">
+        Topic-wise Checklist
       </Heading>
       <Accordion defaultIndex={[0]} allowMultiple>
         <AccordionItem>

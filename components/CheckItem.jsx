@@ -52,7 +52,7 @@ const CheckItem = ({ name, isChecked, id, changeCheck, date, type }) => {
             style={{ color: "gray", fontSize: "0.8rem", marginLeft: "1rem" }}
           >
             {" "}
-            {isChecked && "completed: " + date}
+            {isChecked && "Completed: " + date}
           </span>
         </Box>
       </div>
