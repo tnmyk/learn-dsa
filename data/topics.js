@@ -16,6 +16,11 @@ const topics = {
       type: "Sorting",
     },
     {
+      name: "Selection Sort",
+      id: "selection-sort",
+      type: "Sorting",
+    },
+    {
       name: "Insertion Sort",
       id: "insertion-sort",
       type: "Sorting",
@@ -188,9 +193,7 @@ const topics = {
       type: "",
     },
   ],
-  Adv: [
-    
-  ],
+  Adv: [],
 };
 
 export default topics;

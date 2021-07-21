@@ -1,5 +1,10 @@
 const cards = [
   {
+    title: "Visualize Network Graph",
+    link: "graph",
+    snippet: "Visualize Network Graph",
+  },
+  {
     title: "Update Checklist",
     link: "checklist",
     snippet: "Update Checklist",
