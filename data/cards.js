@@ -1,5 +1,10 @@
 const cards = [
   {
+    title: "Update Checklist",
+    link: "checklist",
+    snippet: "Update Checklist",
+  },
+  {
     title: "Learn Algorithms",
     link: "algorithms",
     snippet: "Learn Algorithms",

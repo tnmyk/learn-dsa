@@ -36,7 +36,7 @@ export default function Home() {
           w="max-content"
           my={["0.5rem", "1  rem", "1.5rem", "2rem"]}
         >
-          Snippets and More
+          Topic Checklist and Explainations.
         </Heading>
         <Grid
           mt="4rem"

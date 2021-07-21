@@ -9,9 +9,7 @@ const Navbar = () => {
     <Flex
       flexDir={["row", "row", "column", "column"]}
       alignItems={["space-evenly", "space-evenly", "center", "center"]}
-      // justifyContent={["center", "center", "space-evenly", "space-evenly"]}
       justifyContent='space-evenly'
-      // p='1.5rem'
       py={['1rem','1rem','0','0']}
       h={["4rem", "4rem", "100vh", "100vh"]}
       w={["100%", "100%", "4rem", "4rem"]}
@@ -23,12 +21,13 @@ const Navbar = () => {
       <Link href="/">
         <IconButton aria-label="Home" icon={<BiHomeAlt />} w="1rem" />
       </Link>
-      <Link href="/graph">
-        <IconButton aria-label="Home" icon={<GrGraphQl />} w="1rem" />
-      </Link>
       <Link href="/checklist">
         <IconButton aria-label="Home" icon={<GoCheck />} w="1rem" />
       </Link>
+      <Link href="/graph">
+        <IconButton aria-label="Home" icon={<GrGraphQl />} w="1rem" />
+      </Link>
+      
     </Flex>
   );
 };
