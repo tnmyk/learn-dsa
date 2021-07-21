@@ -1,5 +1,6 @@
 const Graph = () => {
-  return <div style={{background:'red'}}>
+  return <div>
+    [Graph will be added soon]
   </div>;
 };
 
