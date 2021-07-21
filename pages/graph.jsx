@@ -47,7 +47,7 @@ const Graph = () => {
 
   return (
     <>
-      <p>Try dragging the nodes. Currently in BETA mode.</p>
+      <p>Try dragging the nodes. Currently in BETA mode. Rest of the topics will be added soon.</p>
       <div style={{ width: "100%", minHeight: "80vh" }} ref={domNode} />
     </>
   );
