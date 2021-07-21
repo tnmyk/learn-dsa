@@ -36,6 +36,7 @@ const Algorithms = ({ content, title, topic, code }) => {
           width="100%"
           minHeight={["10rem", "14rem", "20rem", "20rem"]}
           margin="1rem auto"
+          mt='4rem'
         >
           <Image
             alt="Mountains"
