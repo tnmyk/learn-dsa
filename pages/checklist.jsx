@@ -22,7 +22,15 @@ const CheckList = () => {
     if (JSON.stringify(checkData) == "{}") return;
     localStorage.setItem(["checklist"], JSON.stringify(checkData));
     localStorage.setItem(["dates"], JSON.stringify(dates));
+    setCompletedNo({
+      algo: topics.algorithms.filter((x) => checkData[x.id] == true).length,
+      algoAdv: topics.algorithmsAdv.filter((x) => checkData[x.id] == true).length,
+      ds: topics.dataStructures.filter((x) => checkData[x.id] == true).length,
+      dsAdv: topics.dataStructuresAdv.filter((x) => checkData[x.id] == true).length,
+      adv: topics.Adv.filter((x) => checkData[x.id] == true).length,
+    });
   }, [checkData]);
+
   useEffect(() => {
     const local = localStorage.getItem("checklist");
     const dates = localStorage.getItem("dates");
@@ -31,11 +39,31 @@ const CheckList = () => {
       setDates(JSON.parse(dates));
     }
   }, []);
+  const [completedNo,setCompletedNo] =useState(0)
+  
   return (
-    <div style={{ margin: "0 auto", width: "90%" ,paddingBottom:'5rem'}}>
-      <Heading ml='0.8rem' fontSize={["2rem", "3rem", "3rem", "3rem"]} mb="3rem">
+    <div style={{ margin: "0 auto", width: "90%", paddingBottom: "5rem" }}>
+      <Heading
+        ml="0.8rem"
+        fontSize={["2rem", "3rem", "3rem", "3rem"]}
+        mb="3rem"
+      >
         Topic-wise Checklist
       </Heading>
+      <Tag ml="1rem" mb="1rem" size="md" colorScheme="teal">
+        Total topics completed by you :{" "}
+        {completedNo.algo +
+          completedNo.algoAdv +
+          completedNo.ds +
+          completedNo.dsAdv +
+          completedNo.adv +
+          "/" +
+          (topics.algorithms.length +
+            topics.algorithmsAdv.length +
+            topics.dataStructures.length +
+            topics.dataStructuresAdv.length +
+            topics.Adv.length)}
+      </Tag>
       <Accordion defaultIndex={[0]} allowMultiple>
         <AccordionItem>
           <h2>
@@ -43,10 +71,7 @@ const CheckList = () => {
               <Flex alignItems="center" flex="1" textAlign="left">
                 Algorithms{" "}
                 <Tag ml="1rem" size="sm" colorScheme="teal">
-                  {topics.algorithms.filter((x) => checkData[x.id] == true)
-                    .length +
-                    "/" +
-                    topics.algorithms.length}
+                  {completedNo.algo + "/" + topics.algorithms.length}
                 </Tag>
               </Flex>
               <AccordionIcon />
@@ -75,10 +100,7 @@ const CheckList = () => {
               <Flex alignItems="center" flex="1" textAlign="left">
                 Algorithms (advanced){" "}
                 <Tag ml="1rem" size="sm" colorScheme="teal">
-                  {topics.algorithmsAdv.filter((x) => checkData[x.id] == true)
-                    .length +
-                    "/" +
-                    topics.algorithmsAdv.length}
+                  {completedNo.algoAdv + "/" + topics.algorithmsAdv.length}
                 </Tag>
               </Flex>
               <AccordionIcon />
@@ -106,10 +128,7 @@ const CheckList = () => {
               <Flex alignItems="center" flex="1" textAlign="left">
                 Data Structures{" "}
                 <Tag ml="1rem" size="sm" colorScheme="teal">
-                  {topics.dataStructures.filter((x) => checkData[x.id] == true)
-                    .length +
-                    "/" +
-                    topics.dataStructures.length}
+                  {completedNo.ds + "/" + topics.dataStructures.length}
                 </Tag>
               </Flex>
               <AccordionIcon />
@@ -137,11 +156,7 @@ const CheckList = () => {
               <Flex alignItems="center" flex="1" textAlign="left">
                 Data Structures (advanced){" "}
                 <Tag ml="1rem" size="sm" colorScheme="teal">
-                  {topics.dataStructuresAdv.filter(
-                    (x) => checkData[x.id] == true
-                  ).length +
-                    "/" +
-                    topics.dataStructuresAdv.length}
+                  {completedNo.dsAdv + "/" + topics.dataStructuresAdv.length}
                 </Tag>
               </Flex>
               <AccordionIcon />
@@ -169,9 +184,7 @@ const CheckList = () => {
               <Flex alignItems="center" flex="1" textAlign="left">
                 More Advanced Topics{" "}
                 <Tag ml="1rem" size="sm" colorScheme="teal">
-                  {topics.Adv.filter((x) => checkData[x.id] == true).length +
-                    "/" +
-                    topics.Adv.length}
+                  {completedNo.adv + "/" + topics.Adv.length}
                 </Tag>
               </Flex>
               <AccordionIcon />

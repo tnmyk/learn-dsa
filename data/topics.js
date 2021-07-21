@@ -189,16 +189,7 @@ const topics = {
     },
   ],
   Adv: [
-    {
-      name: "Linear Search",
-      id: "linear-search",
-      type: "",
-    },
-    {
-      name: "Binary Search",
-      id: "binary-search",
-      type: "",
-    },
+    
   ],
 };
 
