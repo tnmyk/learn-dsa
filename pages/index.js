@@ -27,11 +27,15 @@ export default function Home() {
         <Heading
           fontSize={["2xl", "4xl", "5xl", "6xl"]}
           w="max-content"
-          mt="8rem"
+          mt={["5rem", "6rem", "7rem", "8rem"]}
         >
           Data Structure and Algorithms
         </Heading>
-        <Heading size="md" w="max-content" my="2rem">
+        <Heading
+          fontSize={["sm", "md", "lg", "xl"]}
+          w="max-content"
+          my={["0.5rem", "1  rem", "1.5rem", "2rem"]}
+        >
           Snippets and More
         </Heading>
         <Grid
