@@ -38,17 +38,15 @@ const CheckList = () => {
       setCheckData(JSON.parse(local));
       setDates(JSON.parse(dates));
     }
-    else{
-      setCompletedNo({
-        algo: 0,
-        algoAdv: 0,
-        ds: 0,
-        dsAdv: 0,
-        adv: 0,
-      });
-    }
+    
   }, []);
-  const [completedNo,setCompletedNo] =useState(0)
+  const [completedNo, setCompletedNo] = useState({
+    algo: 0,
+    algoAdv: 0,
+    ds: 0,
+    dsAdv: 0,
+    adv: 0,
+  });
   
   return (
     <div style={{ margin: "0 auto", width: "90%", paddingBottom: "5rem" }}>
