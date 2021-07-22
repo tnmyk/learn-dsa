@@ -38,6 +38,15 @@ const CheckList = () => {
       setCheckData(JSON.parse(local));
       setDates(JSON.parse(dates));
     }
+    else{
+      setCompletedNo({
+        algo: 0,
+        algoAdv: 0,
+        ds: 0,
+        dsAdv: 0,
+        adv: 0,
+      });
+    }
   }, []);
   const [completedNo,setCompletedNo] =useState(0)
   
