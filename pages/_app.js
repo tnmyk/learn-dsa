@@ -59,6 +59,9 @@ function MyApp({ Component, pageProps }) {
           display: "block",
           _hover: {},
         },
+        ".inline":{
+          display:"inline-flex"
+        },
         ".link-container": {
           marginLeft: "2rem",
           marginBottom: "2rem",
