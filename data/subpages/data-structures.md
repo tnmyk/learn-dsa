@@ -1,3 +1,4 @@
 # Learn Data Structures
 
-[This page will be added soon]
+[This page will be updated soon]
+

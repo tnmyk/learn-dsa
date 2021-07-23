@@ -28,7 +28,6 @@ const Algorithms = ({ content, title, topic, code }) => {
         my="2rem"
         mx="auto"
         position="relative"
-
       >
         <Box
           borderRadius="15px"
@@ -36,7 +35,7 @@ const Algorithms = ({ content, title, topic, code }) => {
           width="100%"
           minHeight={["10rem", "14rem", "20rem", "20rem"]}
           margin="1rem auto"
-          mt='4rem'
+          mt="4rem"
         >
           <Image
             alt="Mountains"
@@ -65,20 +64,31 @@ export default Algorithms;
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(join(process.cwd(), "data", "algorithms"));
-
-  const paths = files.map((file) => ({
-    params: {
-      topic: file.replace(/\.md$/, ""),
-    },
-  }));
+  // {
+  //   params: {
+  //     topic: file.replace(/\.md$/, ""),
+  //   },
+  // }
+  const paths = [];
+  files.forEach((file) => {
+    const sub = fs.readdirSync(join(process.cwd(), "data", "algorithms", file));
+    sub.forEach((x) => {
+      paths.push({
+        params: {
+          cat: file,
+          topic: x.replace(/\.md$/, ""),
+        },
+      });
+    });
+  });
   return {
     paths,
     fallback: false,
   };
 };
-export const getStaticProps = async ({ params: { topic } }) => {
+export const getStaticProps = async ({ params: { cat, topic } }) => {
   const file = fs.readFileSync(
-    join(process.cwd(), "data", "algorithms", topic + ".md"),
+    join(process.cwd(), "data", "algorithms",cat, topic + ".md"),
     "utf-8"
   );
   const code = fs.readFileSync(
@@ -87,7 +97,7 @@ export const getStaticProps = async ({ params: { topic } }) => {
   );
 
   const mdxSource = await serialize(file);
-  // const codeSource = await serialize(code);
+
   return {
     props: {
       content: mdxSource,
