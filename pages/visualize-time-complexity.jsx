@@ -17,7 +17,7 @@ const Circle = ({ bgc }) => {
 const VisualizeTimePage = () => {
   return (
     <div style={{ width: "90%", margin: "0 auto" }}>
-      <Heading mb="3rem">Visualize Time Complexity</Heading>
+      <Heading mb="1rem">Visualize Time Complexity</Heading>
       <div style={{ margin: "0 auto", width: "80%" }}>
         <img
           src="/graphnew.svg"
