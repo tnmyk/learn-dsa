@@ -21,4 +21,5 @@
 
   <p className='link-container'>
     <Link href='/algorithms/arrays/find-all-sub-arrays'><a className='link'>Find all sub-arrays of an array</a></Link>
+    <Link href='/algorithms/arrays/find-largest-sub-array-sum-(cumulative-sum-approach)'><a className='link'>Find largest sub-array sum (Cumulative sum approach)</a></Link>
   </p>

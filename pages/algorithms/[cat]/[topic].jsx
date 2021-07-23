@@ -15,7 +15,7 @@ const Algorithms = ({ content, title, topic, code }) => {
         textTransform="capitalize"
         mb="3rem"
         fontWeight="500"
-        fontSize={["2rem", "3rem", "4rem", "5rem"]}
+        fontSize={["2rem", "2.5rem", "3rem", "3rem"]}
       >
         {title}
       </Heading>
@@ -33,7 +33,7 @@ const Algorithms = ({ content, title, topic, code }) => {
           borderRadius="15px"
           overflow="hidden"
           width="100%"
-          minHeight={["10rem", "14rem", "20rem", "20rem"]}
+          minHeight={["20rem", "23rem", "26rem", "30rem"]}
           margin="1rem auto"
           mt="4rem"
         >
@@ -64,11 +64,7 @@ export default Algorithms;
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(join(process.cwd(), "data", "algorithms"));
-  // {
-  //   params: {
-  //     topic: file.replace(/\.md$/, ""),
-  //   },
-  // }
+
   const paths = [];
   files.forEach((file) => {
     const sub = fs.readdirSync(join(process.cwd(), "data", "algorithms", file));
@@ -88,7 +84,7 @@ export const getStaticPaths = async () => {
 };
 export const getStaticProps = async ({ params: { cat, topic } }) => {
   const file = fs.readFileSync(
-    join(process.cwd(), "data", "algorithms",cat, topic + ".md"),
+    join(process.cwd(), "data", "algorithms", cat, topic + ".md"),
     "utf-8"
   );
   const code = fs.readFileSync(
@@ -101,7 +97,7 @@ export const getStaticProps = async ({ params: { cat, topic } }) => {
   return {
     props: {
       content: mdxSource,
-      title: topic.replace("-", " "),
+      title: topic.replace(/-/g, " "),
       topic: topic,
       // code: codeSource,
       code: code,
