@@ -20,7 +20,7 @@ const cards = [
     snippet: "Learn Data Structures",
   },
   {
-    title: "Time Complexity O(n)",
+    title: "Time Complexity (Big-O)",
     link: "visualize-time-complexity",
     snippet: "Visualize Time Complexity",
   },
