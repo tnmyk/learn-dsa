@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 576 576" style="enable-background:new 0 0 576 576;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#3BBBBF;stroke-width:2;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#4D985A;stroke-width:2;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#427EBB;stroke-width:2;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#7056A4;stroke-width:2;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#F68B32;stroke-width:2;stroke-miterlimit:10;}
+	.st7{fill:none;}
+	.st8{fill:#FFFFFF;}
+	.st9{font-family:'SegoeUI';}
+	.st10{font-size:19.8275px;}
+</style>
+<g id="Background">
+	<rect class="st0" width="576" height="576"/>
+</g>
+<g id="Graph">
+	<g id="Axis">
+		<line class="st1" x1="79.26" y1="480.1" x2="79.26" y2="83.52"/>
+		<line class="st2" x1="77.98" y1="480.1" x2="474.56" y2="480.1"/>
+	</g>
+	<g id="lines">
+		<line class="st3" x1="78.96" y1="479.8" x2="446.56" y2="112.2"/>
+		<path class="st4" d="M78.96,479.8c14.42-7.62,36-14.67,47.07-24.26c135.2-117.05,112.63-299.9,108.67-365.2"/>
+		<path class="st5" d="M85.37,477.73c197.56-38.47,261.7-308.39,239.53-399.21"/>
+		<path class="st6" d="M79.26,480.1c5.79-14.01,16.82-34.66,37.9-50.43c22.79-17.04,45.95-19.87,84.28-22.92
+			c99.13-7.87,178.34-7.5,194.43-7.39c31.37,0.22,57.56,0.51,76.15,0.74"/>
+	</g>
+	<g id="Labels">
+		<rect x="211.09" y="60.03" class="st7" width="85.15" height="25.14"/>
+		<text transform="matrix(1 0 0 1 211.0894 74.71)" class="st8 st9 st10">O(n2)</text>
+		<rect x="301.28" y="53.38" class="st7" width="85.15" height="25.14"/>
+		<text transform="matrix(1 0 0 1 301.2822 68.0571)" class="st8 st9 st10">O(nlogn)</text>
+		<rect x="442.63" y="86.77" class="st7" width="85.15" height="25.14"/>
+		<text transform="matrix(1 0 0 1 442.6328 101.4473)" class="st8 st9 st10">O(n)</text>
+		<rect x="483.44" y="391.19" class="st7" width="85.15" height="25.14"/>
+		<text transform="matrix(1 0 0 1 483.4365 405.8652)" class="st8 st9 st10">O(logn)</text>
+		<rect x="449.41" y="454.96" class="st7" width="85.15" height="25.14"/>
+		<text transform="matrix(1 0 0 1 449.4121 469.6416)" class="st8 st9 st10">O(1)</text>
+		<rect x="196.22" y="502.74" class="st7" width="216.19" height="22.83"/>
+		<text transform="matrix(1 0 0 1 196.2202 517.418)" class="st8 st9 st10">Number of Elements (n)</text>
+		<rect x="9.09" y="265.55" class="st7" width="85.15" height="25.14"/>
+		<text transform="matrix(1 0 0 1 9.0908 280.23)" class="st8 st9 st10">Time</text>
+	</g>
+</g>
+</svg>

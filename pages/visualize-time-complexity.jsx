@@ -19,13 +19,17 @@ const VisualizeTimePage = () => {
     <div style={{ width: "90%", margin: "0 auto" }}>
       <Heading mb="3rem">Visualize Time Complexity</Heading>
       <div style={{ margin: "0 auto", width: "80%" }}>
-        <img src="/graph.svg" alt="" width="100%" />
+        <img
+          src="/graphnew.svg"
+          alt=""
+          width="75%"
+          style={{ margin: "0 auto" }}
+        />
         <Flex
           flexDir={["column", "column", "row", "row"]}
           alignItems={["", "", "center", "center"]}
           justifyContent="center"
           width="100%"
-          marginTop="3rem"
         >
           <div
             style={{
@@ -83,10 +87,10 @@ const VisualizeTimePage = () => {
             )
           </div>
         </Flex>
-        <div style={{ margin: "0.5rem auto", width: "max-content" }}>
+        {/* <div style={{ margin: "0.5rem auto", width: "max-content" }}>
           {" "}
           N {"->"} Number of Elements
-        </div>
+        </div> */}
       </div>
     </div>
   );
