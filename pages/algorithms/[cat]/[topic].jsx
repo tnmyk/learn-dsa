@@ -38,6 +38,7 @@ const Algorithms = ({ content, title, topic, code }) => {
           mt="4rem"
         >
           <Image
+            draggable="false"
             alt="Mountains"
             src={`/code/${topic}.png`}
             layout="fill"
